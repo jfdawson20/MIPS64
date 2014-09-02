@@ -1,0 +1,354 @@
+
+`include "project_defs.vh"
+
+module controller ( 
+  input  wire [5:0] p_OpCode,
+  input  wire [5:0] p_FUNCT,
+  input  wire [4:0] p_BranchType,
+  output reg [`IE_CTRL_SIZE-1:0]  IE_Control, 
+  output reg [`MEM_CTRL_SIZE-1:0] MEM_Control, 
+  output reg [`WB_CTRL_SIZE-1:0]  WB_Control
+  
+  );
+  
+  /* IE stage decode */
+  always_comb begin 
+    case(p_OpCode) 
+      /*R-Type*/ 
+      6'b000000 : 
+      case(p_FUNCT)
+        6'b100000 : /*ADD*/
+          IE_Control = 32'h00000004;
+        6'b100001 : /*ADDU*/
+          IE_Control = 32'h00000005;
+        6'b100010 : /*SUB*/
+          IE_Control = 32'h00000006;
+        6'b100011 : /*SUBU*/
+          IE_Control = 32'h00000007;
+        6'b100100 : /* AND */
+          IE_Control = 32'h00000000;
+        6'b100101 : /* OR */
+          IE_Control = 32'h00000001;
+        6'b100110 : /* XOR */
+          IE_Control = 32'h00000002;
+        6'b100111 : /* NOR */   
+          IE_Control = 32'h00000003;
+        6'b000000 : /* SLL */
+          IE_Control = 32'h0000002C;
+        6'b000010 : /* SRL */
+          IE_Control = 32'h0000002E;
+        6'b000011 : /* SRA */
+          IE_Control = 32'h0000002D;
+        6'b000100 : /* SSLV */
+          IE_Control = 32'h0000006C;
+        6'b000110 : /* SRLV */
+          IE_Control = 32'h0000006E;
+        6'b000111 : /* SRAV */
+          IE_Control = 32'h0000006F;
+        6'b101010 : /* SLT */
+          IE_Control = 32'h0000000A;
+        6'b101011 : /* SLTU */
+          IE_Control = 32'h0000000B;
+        /* R Type Jumps */
+        6'b001000 : /* JR */
+          IE_Control = 32'h00000016;
+        6'b001001 : /* JALR */ 
+          IE_Control = 32'h00000017;
+        default : /*default case, not supported instruction */
+          IE_Control = 32'h00000018;
+      endcase
+      /* Immediate Instructions */  
+      
+      6'b001000 : /* ADDI */
+        IE_Control = 32'h00000034;
+      6'b001001 : /* ADDUI */
+        IE_Control = 32'h00000035;
+      6'b001100 : /* ANDI */
+        IE_Control = 32'h00000030;
+      6'b001101 : /* ORI */
+        IE_Control = 32'h00000031;
+      6'b001110 : /* XORI */ 
+        IE_Control = 32'h00000032;
+      6'b001010 : /* SLTI */
+        IE_Control = 32'h000000BA;
+      6'b001011 : /* SLTIU */ 
+        IE_Control = 32'h000000BB;
+        
+      /* Memory Instructions */
+      
+      6'b100100 : /* LBU */
+        IE_Control = 32'h00000026;
+      6'b100001 : /* LH */
+        IE_Control = 32'h00000027;
+      6'b100101 : /* LHU */
+        IE_Control = 32'h00000028;
+      6'b100011 : /* LW */ 
+        IE_Control = 32'h00000029;
+      6'b001111 : /* LUI */ 
+        IE_Control = 32'h00000030;
+      6'b101000 : /* SB */
+        IE_Control = 32'h00000031;
+      6'b101001 : /* SH */ 
+        IE_Control = 32'h00000032;
+      6'b101011 : /* SW */
+        IE_Control = 32'h00000033;
+      /* Branching Instructions */
+      
+      6'b000100 : /* BEQ */
+        IE_Control = 32'h00000034;
+      6'b000101 : /* BNE */   
+        IE_Control = 32'h00000035;
+      6'b000001 : 
+      case (p_BranchType)   
+        6'b00000 : /* BLTZ */ 
+          IE_Control = 32'h00000036;
+        6'b00001 : /* BGEZ */ 
+          IE_Control = 32'h00000037;
+        6'b10000 : /* BLTZAL */
+          IE_Control = 32'h00000038;
+        6'b10001 : /* BGEZAL */ 
+          IE_Control = 32'h00000039;
+        default : /*default case, not supported instruction */
+          IE_Control = 32'h00000040;
+      endcase
+      
+      6'b000110 : /* BLEZ */
+        IE_Control = 32'h00000041;
+      6'b000111 : /* BGTZ */ 
+        IE_Control = 32'h00000042;
+      6'b000010 : /* J */ 
+        IE_Control = 32'h00000043;
+      6'b000011 : /* JAL */ 
+        IE_Control = 32'h00000044;
+      default : /* Default Case, Invalid Instruction Format */
+        IE_Control = 32'h00000045; 
+    endcase
+  end
+  
+  /* MEM stage decode */
+  always_comb begin 
+    case(p_OpCode) 
+      /*R-Type*/ 
+      6'b000000 : 
+      case(p_FUNCT)
+        6'b100000 : /*ADD*/
+          MEM_Control = 32'h00000000;
+        6'b100001 : /*ADDU*/
+          MEM_Control = 32'h00000000;
+        6'b100010 : /*SUB*/
+          MEM_Control = 32'h00000000;
+        6'b100011 : /*SUBU*/
+          MEM_Control = 32'h00000000;
+        6'b100100 : /* AND */
+          MEM_Control = 32'h00000000;
+        6'b100101 : /* OR */
+          MEM_Control = 32'h00000000;
+        6'b100110 : /* XOR */
+          MEM_Control = 32'h00000000;
+        6'b100111 : /* NOR */   
+          MEM_Control = 32'h00000000;
+        6'b000000 : /* SLL */
+          MEM_Control = 32'h00000000;
+        6'b000010 : /* SRL */
+          MEM_Control = 32'h00000000;
+        6'b000011 : /* SRA */
+          MEM_Control = 32'h00000000;
+        6'b000100 : /* SSLV */
+          MEM_Control = 32'h00000000;
+        6'b000110 : /* SRLV */
+          MEM_Control = 32'h00000000;
+        6'b000111 : /* SRAV */
+          MEM_Control = 32'h00000000;
+        6'b101010 : /* SLT */
+          MEM_Control = 32'h00000000;
+        6'b101011 : /* SLTU */
+          MEM_Control = 32'h00000000;
+        /* R Type Jumps */
+        6'b001000 : /* JR */
+          MEM_Control = 32'h00000000;
+        6'b001001 : /* JALR */ 
+          MEM_Control = 32'h00000000;
+        default : /*default case, not supported instruction */
+          MEM_Control = 32'h00000000;
+      endcase
+      /* Immediate Instructions */  
+      
+      6'b001000 : /* ADDI */
+        MEM_Control = 32'h00000000;
+      6'b001001 : /* ADDUI */
+        MEM_Control = 32'h00000000;
+      6'b001100 : /* ANDI */
+        MEM_Control = 32'h00000000;
+      6'b001101 : /* ORI */
+        MEM_Control = 32'h00000000;
+      6'b001110 : /* XORI */ 
+        MEM_Control = 32'h00000000;
+      6'b001010 : /* SLTI */
+        MEM_Control = 32'h00000000;
+      6'b001011 : /* SLTIU */ 
+        MEM_Control = 32'h00000000;
+      /* Memory Instructions */
+      
+      6'b100100 : /* LBU */
+        MEM_Control = 32'h00000026;
+      6'b100001 : /* LH */
+        MEM_Control = 32'h00000027;
+      6'b100101 : /* LHU */
+        MEM_Control = 32'h00000028;
+      6'b100011 : /* LW */ 
+        MEM_Control = 32'h00000029;
+      6'b001111 : /* LUI */ 
+        MEM_Control = 32'h00000030;
+      6'b101000 : /* SB */
+        MEM_Control = 32'h00000031;
+      6'b101001 : /* SH */ 
+        MEM_Control = 32'h00000032;
+      6'b101011 : /* SW */
+        MEM_Control = 32'h00000033;
+      /* Branching Instructions */
+      
+      6'b000100 : /* BEQ */
+        MEM_Control = 32'h00000034;
+      6'b000101 : /* BNE */   
+        MEM_Control = 32'h00000035;
+      6'b000001 : 
+      case (p_BranchType)   
+        6'b00000 : /* BLTZ */ 
+          MEM_Control = 32'h00000036;
+        6'b00001 : /* BGEZ */ 
+          MEM_Control = 32'h00000037;
+        6'b10000 : /* BLTZAL */
+          MEM_Control = 32'h00000038;
+        6'b10001 : /* BGEZAL */ 
+          MEM_Control = 32'h00000039;
+        default : /*default case, not supported instruction */
+          MEM_Control = 32'h00000040;
+      endcase
+      
+      6'b000110 : /* BLEZ */
+        MEM_Control = 32'h00000041;
+      6'b000111 : /* BGTZ */ 
+        MEM_Control = 32'h00000042;
+      6'b000010 : /* J */ 
+        MEM_Control = 32'h00000043;
+      6'b000011 : /* JAL */ 
+        MEM_Control = 32'h00000044;
+      default : /* Default Case, Invalid Instruction Format */
+        MEM_Control = 32'h00000045; 
+    endcase
+  end
+ 
+  /* WB stage decode */
+  always_comb begin 
+    case(p_OpCode) 
+      /*R-Type*/ 
+      6'b000000 : 
+      case(p_FUNCT)
+        6'b100000 : /*ADD*/
+          WB_Control = 32'h00000003;
+        6'b100001 : /*ADDU*/
+          WB_Control = 32'h00000003;
+        6'b100010 : /*SUB*/
+          WB_Control = 32'h00000003;
+        6'b100011 : /*SUBU*/
+          WB_Control = 32'h00000003;
+        6'b100100 : /* AND */
+          WB_Control = 32'h00000003;
+        6'b100101 : /* OR */
+          WB_Control = 32'h00000003;
+        6'b100110 : /* XOR */
+          WB_Control = 32'h00000003;
+        6'b100111 : /* NOR */   
+          WB_Control = 32'h00000003;
+        6'b000000 : /* SLL */
+          WB_Control = 32'h00000003;
+        6'b000010 : /* SRL */
+          WB_Control = 32'h00000003;
+        6'b000011 : /* SRA */
+          WB_Control = 32'h00000003;
+        6'b000100 : /* SSLV */
+          WB_Control = 32'h00000003;
+        6'b000110 : /* SRLV */
+          WB_Control = 32'h00000003;
+        6'b000111 : /* SRAV */
+          WB_Control = 32'h00000003;
+        6'b101010 : /* SLT */
+          WB_Control = 32'h00000003;
+        6'b101011 : /* SLTU */
+          WB_Control = 32'h00000003;
+        /* R Type Jumps */
+        6'b001000 : /* JR */
+          WB_Control = 32'h00000007;
+        6'b001001 : /* JALR */ 
+          WB_Control = 32'h00000007;
+        default : /*default case, not supported instruction */
+          WB_Control = 32'h00000000;
+      endcase
+      /* Immediate Instructions */  
+      
+      6'b001000 : /* ADDI */
+        WB_Control = 32'h00000003;
+      6'b001001 : /* ADDUI */
+        WB_Control = 32'h00000003;
+      6'b001100 : /* ANDI */
+        WB_Control = 32'h00000003;
+      6'b001101 : /* ORI */
+        WB_Control = 32'h00000003;
+      6'b001110 : /* XORI */ 
+        WB_Control = 32'h00000003;
+      6'b001010 : /* SLTI */
+        WB_Control = 32'h00000003;
+      6'b001011 : /* SLTIU */ 
+        WB_Control = 32'h00000003;
+      /* Memory Instructions */
+      
+      6'b100100 : /* LBU */
+        WB_Control = 32'h00000002;
+      6'b100001 : /* LH */
+        WB_Control = 32'h00000002;
+      6'b100101 : /* LHU */
+        WB_Control = 32'h00000002;
+      6'b100011 : /* LW */ 
+        WB_Control = 32'h00000002;
+      6'b001111 : /* LUI */ 
+        WB_Control = 32'h00000002;
+      6'b101000 : /* SB */
+        WB_Control = 32'h00000002;
+      6'b101001 : /* SH */ 
+        WB_Control = 32'h00000002;
+      6'b101011 : /* SW */
+        WB_Control = 32'h00000002;
+      /* Branching Instructions */
+      
+      6'b000100 : /* BEQ */
+        WB_Control = 32'h00000034;
+      6'b000101 : /* BNE */   
+        WB_Control = 32'h00000035;
+      6'b000001 : 
+      case (p_BranchType)   
+        6'b00000 : /* BLTZ */ 
+          WB_Control = 32'h00000036;
+        6'b00001 : /* BGEZ */ 
+          WB_Control = 32'h00000037;
+        6'b10000 : /* BLTZAL */
+          WB_Control = 32'h00000038;
+        6'b10001 : /* BGEZAL */ 
+          WB_Control = 32'h00000039;
+        default : /*default case, not supported instruction */
+          WB_Control = 32'h00000040;
+      endcase
+      
+      6'b000110 : /* BLEZ */
+        WB_Control = 32'h00000041;
+      6'b000111 : /* BGTZ */ 
+        WB_Control = 32'h00000042;
+      6'b000010 : /* J */ 
+        WB_Control = 32'h00000043;
+      6'b000011 : /* JAL */ 
+        WB_Control = 32'h00000044;
+      default : /* Default Case, Invalid Instruction Format */
+        WB_Control = 32'h00000045; 
+    endcase
+  end
+
+endmodule 

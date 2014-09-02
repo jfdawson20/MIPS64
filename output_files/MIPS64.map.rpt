@@ -1,0 +1,854 @@
+Analysis & Synthesis report for MIPS64
+Tue Sep 02 12:22:11 2014
+Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "WB_Block:WB_Logic"
+ 13. Port Connectivity Checks: "MEM_WB_PIPE:MEM_WB_REGS"
+ 14. Port Connectivity Checks: "IE_MEM_PIPE:IE_MEM_Regs"
+ 15. Port Connectivity Checks: "IE_Block:IE_Logic|addrDyn:IE_BranchAddr"
+ 16. Port Connectivity Checks: "IE_Block:IE_Logic"
+ 17. Port Connectivity Checks: "ID_IE_PIPE:ID_IE_Regs"
+ 18. Port Connectivity Checks: "ID_Block:ID_Logic|controller:ID_CTRL"
+ 19. Port Connectivity Checks: "IF_ID_PIPE:IF_ID_Regs"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Sep 02 12:22:11 2014      ;
+; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
+; Revision Name                   ; MIPS64                                     ;
+; Top-level Entity Name           ; MIPS64                                     ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 2463                                       ;
+; Total pins                      ; 298                                        ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGTFD7D5F31I7     ;                    ;
+; Top-level entity name                                                           ; MIPS64             ; MIPS64             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Verilog Show LMF Mapping Messages                                               ; Off                ;                    ;
+; Verilog Version                                                                 ; SystemVerilog_2005 ; Verilog_2001       ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; cpu_rtl/WB_Block.v               ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/WB_Block.v      ;         ;
+; cpu_rtl/registers.v              ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/registers.v     ;         ;
+; cpu_rtl/MIPS64.v                 ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/MIPS64.v        ;         ;
+; cpu_rtl/MEM_WB_PIPE.v            ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/MEM_WB_PIPE.v   ;         ;
+; cpu_rtl/MEM_Block.v              ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/MEM_Block.v     ;         ;
+; cpu_rtl/IF_ID_PIPE.v             ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/IF_ID_PIPE.v    ;         ;
+; cpu_rtl/IF_Block.v               ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/IF_Block.v      ;         ;
+; cpu_rtl/IE_MEM_PIPE.v            ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/IE_MEM_PIPE.v   ;         ;
+; cpu_rtl/IE_Block.v               ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/IE_Block.v      ;         ;
+; cpu_rtl/ID_IE_PIPE.v             ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/ID_IE_PIPE.v    ;         ;
+; cpu_rtl/ID_Block.v               ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/ID_Block.v      ;         ;
+; cpu_rtl/controller.v             ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/controller.v    ;         ;
+; cpu_rtl/alu.v                    ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/alu.v           ;         ;
+; cpu_rtl/addrDyn.v                ; yes             ; User Verilog HDL File        ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/addrDyn.v       ;         ;
+; cpu_rtl/project_defs.vh          ; yes             ; Auto-Found Unspecified File  ; C:/Users/jdawson/Dropbox/FPGA/Processor/cpu_rtl/project_defs.vh ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 2207          ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 2313          ;
+;     -- 7 input functions                    ; 4             ;
+;     -- 6 input functions                    ; 1597          ;
+;     -- 5 input functions                    ; 135           ;
+;     -- 4 input functions                    ; 95            ;
+;     -- <=3 input functions                  ; 482           ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 2463          ;
+;                                             ;               ;
+; I/O pins                                    ; 298           ;
+; Total DSP Blocks                            ; 0             ;
+; Maximum fan-out node                        ; p_rst_l~input ;
+; Maximum fan-out                             ; 2464          ;
+; Total fan-out                               ; 24132         ;
+; Average fan-out                             ; 4.49          ;
++---------------------------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------+--------------+
+; |MIPS64                      ; 2313 (216)        ; 2463 (0)     ; 0                 ; 0          ; 298  ; 0            ; |MIPS64                                               ; work         ;
+;    |ID_Block:ID_Logic|       ; 1468 (0)          ; 2048 (0)     ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|ID_Block:ID_Logic                             ; work         ;
+;       |controller:ID_CTRL|   ; 28 (28)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|ID_Block:ID_Logic|controller:ID_CTRL          ; work         ;
+;       |registers:ID_REGBLK0| ; 1440 (1440)       ; 2048 (2048)  ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|ID_Block:ID_Logic|registers:ID_REGBLK0        ; work         ;
+;    |ID_IE_PIPE:ID_IE_Regs|   ; 1 (1)             ; 162 (162)    ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|ID_IE_PIPE:ID_IE_Regs                         ; work         ;
+;    |IE_Block:IE_Logic|       ; 495 (138)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|IE_Block:IE_Logic                             ; work         ;
+;       |alu:IE_ALU|           ; 357 (292)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|IE_Block:IE_Logic|alu:IE_ALU                  ; work         ;
+;          |addrDyn:IE_Addr0|  ; 65 (65)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|IE_Block:IE_Logic|alu:IE_ALU|addrDyn:IE_Addr0 ; work         ;
+;    |IE_MEM_PIPE:IE_MEM_Regs| ; 7 (7)             ; 79 (79)      ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|IE_MEM_PIPE:IE_MEM_Regs                       ; work         ;
+;    |IF_Block:IF_Logic|       ; 62 (62)           ; 62 (62)      ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|IF_Block:IF_Logic                             ; work         ;
+;    |IF_ID_PIPE:IF_ID_Regs|   ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|IF_ID_PIPE:IF_ID_Regs                         ; work         ;
+;    |MEM_WB_PIPE:MEM_WB_REGS| ; 0 (0)             ; 80 (80)      ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|MEM_WB_PIPE:MEM_WB_REGS                       ; work         ;
+;    |WB_Block:WB_Logic|       ; 64 (64)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MIPS64|WB_Block:WB_Logic                             ; work         ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++---------------------------------------------------+-------------------------------------------------------+
+; Register name                                     ; Reason for Removal                                    ;
++---------------------------------------------------+-------------------------------------------------------+
+; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_WriteOut[5..63]     ; Stuck at GND due to stuck port data_in                ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[63]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[63]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[62]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[62]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[61]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[61]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[60]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[60]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[59]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[59]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[58]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[58]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[57]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[57]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[56]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[56]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[55]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[55]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[54]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[54]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[53]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[53]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[52]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[52]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[51]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[51]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[50]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[50]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[49]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[49]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[48]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[48]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[47]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[47]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[46]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[46]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[45]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[45]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[44]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[44]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[43]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[43]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[42]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[42]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[41]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[41]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[40]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[40]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[39]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[39]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[38]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[38]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[37]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[37]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[36]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[36]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[35]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[35]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[34]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[34]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[33]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[33]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[32]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[32]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[31]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[31]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[30]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[30]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[29]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[29]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[28]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[28]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[27]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[27]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[26]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[26]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[25]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[25]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[24]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[24]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[23]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[23]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[22]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[22]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[21]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[21]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[20]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[20]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[19]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[19]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[18]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[18]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[17]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[17]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[16]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[16]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[15]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[15]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[14]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[14]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[13]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[13]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[12]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[12]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[11]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[11]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[10]         ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[10]         ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[9]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[9]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[8]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[8]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[7]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[7]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[6]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[6]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[5]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[5]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[4]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[4]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[3]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[3]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[2]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[2]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[1]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[1]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[0]          ; Lost fanout                                           ;
+; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[0]          ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[7..13]    ; Stuck at GND due to stuck port data_in                ;
+; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[7..13] ; Stuck at GND due to stuck port data_in                ;
+; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[6]     ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[6]        ; Lost fanout                                           ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_SignExtend[15..62]     ; Merged with ID_IE_PIPE:ID_IE_Regs|p_IE_SignExtend[63] ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_RegDestRD[4]           ; Merged with ID_IE_PIPE:ID_IE_Regs|p_IE_SignExtend[63] ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_RegDestRD[3]           ; Merged with ID_IE_PIPE:ID_IE_Regs|p_IE_SignExtend[14] ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_RegDestRD[2]           ; Merged with ID_IE_PIPE:ID_IE_Regs|p_IE_SignExtend[13] ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_RegDestRD[1]           ; Merged with ID_IE_PIPE:ID_IE_Regs|p_IE_SignExtend[12] ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_RegDestRD[0]           ; Merged with ID_IE_PIPE:ID_IE_Regs|p_IE_SignExtend[11] ;
+; MEM_WB_PIPE:MEM_WB_REGS|p_WB_MemData[7..9,11..63] ; Merged with MEM_WB_PIPE:MEM_WB_REGS|p_WB_MemData[10]  ;
+; Total Number of Removed Registers = 312           ;                                                       ;
++---------------------------------------------------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                              ;
++---------------------------------------------+---------------------------+------------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register         ;
++---------------------------------------------+---------------------------+------------------------------------------------+
+; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_WriteOut[63]  ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[6], ;
+;                                             ; due to stuck port data_in ; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[6]     ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[63]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[63]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[62]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[62]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[61]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[61]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[60]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[60]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[59]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[59]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[58]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[58]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[57]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[57]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[56]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[56]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[55]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[55]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[54]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[54]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[53]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[53]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[52]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[52]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[51]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[51]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[50]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[50]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[49]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[49]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[48]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[48]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[47]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[47]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[46]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[46]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[45]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[45]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[44]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[44]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[43]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[43]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[42]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[42]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[41]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[41]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[40]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[40]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[39]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[39]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[38]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[38]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[37]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[37]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[36]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[36]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[35]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[35]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[34]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[34]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[33]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[33]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[32]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[32]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[31]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[31]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[30]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[30]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[29]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[29]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[28]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[28]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[27]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[27]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[26]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[26]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[25]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[25]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[24]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[24]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[23]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[23]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[22]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[22]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[21]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[21]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[20]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[20]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[19]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[19]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[18]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[18]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[17]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[17]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[16]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[16]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[15]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[15]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[14]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[14]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[13]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[13]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[12]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[12]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[11]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[11]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[10]   ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[10]      ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[9]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[9]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[8]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[8]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[7]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[7]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[6]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[6]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[5]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[5]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[4]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[4]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[3]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[3]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[2]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[2]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[1]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[1]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_PC_Counter[0]    ; Lost Fanouts              ; IF_ID_PIPE:IF_ID_Regs|p_ID_PC_Counter[0]       ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[13] ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[13] ;
+;                                             ; due to stuck port data_in ;                                                ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[12] ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[12] ;
+;                                             ; due to stuck port data_in ;                                                ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[11] ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[11] ;
+;                                             ; due to stuck port data_in ;                                                ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[10] ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[10] ;
+;                                             ; due to stuck port data_in ;                                                ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[9]  ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[9]  ;
+;                                             ; due to stuck port data_in ;                                                ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[8]  ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[8]  ;
+;                                             ; due to stuck port data_in ;                                                ;
+; ID_IE_PIPE:ID_IE_Regs|p_IE_MEM_Ctrl_Bus[7]  ; Stuck at GND              ; IE_MEM_PIPE:IE_MEM_Regs|p_MEM_MEM_Ctrl_Bus[7]  ;
+;                                             ; due to stuck port data_in ;                                                ;
++---------------------------------------------+---------------------------+------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2463  ;
+; Number of registers using Synchronous Clear  ; 2103  ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 2463  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2110  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 32:1               ; 64 bits   ; 1344 LEs      ; 1344 LEs             ; 0 LEs                  ; Yes        ; |MIPS64|ID_IE_PIPE:ID_IE_Regs|p_IE_DataA[1]         ;
+; 32:1               ; 64 bits   ; 1344 LEs      ; 1344 LEs             ; 0 LEs                  ; Yes        ; |MIPS64|ID_IE_PIPE:ID_IE_Regs|p_IE_DataB[11]        ;
+; 10:1               ; 17 bits   ; 102 LEs       ; 102 LEs              ; 0 LEs                  ; Yes        ; |MIPS64|IE_MEM_PIPE:IE_MEM_Regs|p_MEM_ALUResult[28] ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 24 LEs               ; 60 LEs                 ; Yes        ; |MIPS64|ID_IE_PIPE:ID_IE_Regs|p_IE_IE_Ctrl_Bus[6]   ;
+; 13:1               ; 12 bits   ; 96 LEs        ; 84 LEs               ; 12 LEs                 ; Yes        ; |MIPS64|IE_MEM_PIPE:IE_MEM_Regs|p_MEM_ALUResult[11] ;
+; 12:1               ; 15 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; Yes        ; |MIPS64|IE_MEM_PIPE:IE_MEM_Regs|p_MEM_ALUResult[35] ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |MIPS64|IE_MEM_PIPE:IE_MEM_Regs|p_MEM_ALUResult[1]  ;
+; 15:1               ; 11 bits   ; 110 LEs       ; 88 LEs               ; 22 LEs                 ; Yes        ; |MIPS64|IE_MEM_PIPE:IE_MEM_Regs|p_MEM_ALUResult[52] ;
+; 18:1               ; 3 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |MIPS64|IE_MEM_PIPE:IE_MEM_Regs|p_MEM_ALUResult[62] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 113 bits  ; 226 LEs       ; 226 LEs              ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 36 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MIPS64|IE_Block:IE_Logic|alu:IE_ALU|ShiftRight1    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; No name available in netlist                        ;
+; 3:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |MIPS64|WB_Block:WB_Logic|p_WB_WritebackData[4]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MIPS64|IE_Block:IE_Logic|alu:IE_ALU|ShiftRight1    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "WB_Block:WB_Logic" ;
++-----------+-------+----------+----------------+
+; Port      ; Type  ; Severity ; Details        ;
++-----------+-------+----------+----------------+
+; p_WB_PC_4 ; Input ; Info     ; Stuck at GND   ;
++-----------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "MEM_WB_PIPE:MEM_WB_REGS" ;
++----------------+-------+----------+-----------------+
+; Port           ; Type  ; Severity ; Details         ;
++----------------+-------+----------+-----------------+
+; p_MEM_WB_Flush ; Input ; Info     ; Stuck at GND    ;
+; p_MEM_WB_Stall ; Input ; Info     ; Stuck at GND    ;
++----------------+-------+----------+-----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "IE_MEM_PIPE:IE_MEM_Regs" ;
++----------------+-------+----------+-----------------+
+; Port           ; Type  ; Severity ; Details         ;
++----------------+-------+----------+-----------------+
+; p_IE_MEM_Stall ; Input ; Info     ; Stuck at GND    ;
+; p_IE_MEM_Flush ; Input ; Info     ; Stuck at GND    ;
++----------------+-------+----------+-----------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "IE_Block:IE_Logic|addrDyn:IE_BranchAddr" ;
++-------+--------+----------+-----------------------------------------+
+; Port  ; Type   ; Severity ; Details                                 ;
++-------+--------+----------+-----------------------------------------+
+; p_CI  ; Input  ; Info     ; Stuck at GND                            ;
+; p_B   ; Input  ; Info     ; Stuck at GND                            ;
+; p_CO  ; Output ; Info     ; Explicitly unconnected                  ;
+; p_OVL ; Output ; Info     ; Explicitly unconnected                  ;
++-------+--------+----------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IE_Block:IE_Logic"                                                                           ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; p_IE_Overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "ID_IE_PIPE:ID_IE_Regs" ;
++---------------+-------+----------+----------------+
+; Port          ; Type  ; Severity ; Details        ;
++---------------+-------+----------+----------------+
+; p_ID_IE_Stall ; Input ; Info     ; Stuck at GND   ;
+; p_ID_IE_Flush ; Input ; Info     ; Stuck at GND   ;
++---------------+-------+----------+----------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "ID_Block:ID_Logic|controller:ID_CTRL" ;
++------------+-------+----------+----------------------------------+
+; Port       ; Type  ; Severity ; Details                          ;
++------------+-------+----------+----------------------------------+
+; p_FUNCT[5] ; Input ; Info     ; Stuck at GND                     ;
++------------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "IF_ID_PIPE:IF_ID_Regs" ;
++---------------+-------+----------+----------------+
+; Port          ; Type  ; Severity ; Details        ;
++---------------+-------+----------+----------------+
+; p_IF_ID_Stall ; Input ; Info     ; Stuck at GND   ;
+; p_IF_ID_Flush ; Input ; Info     ; Stuck at GND   ;
++---------------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 2463                        ;
+;     CLR               ; 298                         ;
+;     CLR SCLR          ; 55                          ;
+;     ENA CLR           ; 62                          ;
+;     ENA CLR SCLR      ; 2048                        ;
+; arriav_lcell_comb     ; 2314                        ;
+;     arith             ; 61                          ;
+;         1 data inputs ; 60                          ;
+;         2 data inputs ; 1                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 2184                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 344                         ;
+;         4 data inputs ; 95                          ;
+;         5 data inputs ; 135                         ;
+;         6 data inputs ; 1597                        ;
+;     shared            ; 65                          ;
+;         0 data inputs ; 1                           ;
+;         3 data inputs ; 64                          ;
+; boundary_port         ; 298                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.40                       ;
+; Average LUT depth     ; 3.58                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:17     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+    Info: Processing started: Tue Sep 02 12:21:49 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS64 -c MIPS64
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/wb_block.v
+    Info (12023): Found entity 1: WB_Block
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/registers.v
+    Info (12023): Found entity 1: registers
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/mips64.v
+    Info (12023): Found entity 1: MIPS64
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/mem_wb_pipe.v
+    Info (12023): Found entity 1: MEM_WB_PIPE
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/mem_block.v
+    Info (12023): Found entity 1: MEM_Block
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/if_id_pipe.v
+    Info (12023): Found entity 1: IF_ID_PIPE
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/if_block.v
+    Info (12023): Found entity 1: IF_Block
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/ie_mem_pipe.v
+    Info (12023): Found entity 1: IE_MEM_PIPE
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/ie_block.v
+    Info (12023): Found entity 1: IE_Block
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/id_ie_pipe.v
+    Info (12023): Found entity 1: ID_IE_PIPE
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/id_block.v
+    Info (12023): Found entity 1: ID_Block
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/exceptionhandler.v
+    Info (12023): Found entity 1: ExceptionHandler
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/controller.v
+    Info (12023): Found entity 1: controller
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/alu.v
+    Info (12023): Found entity 1: alu
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_rtl/addrdyn.v
+    Info (12023): Found entity 1: addrDyn
+Info (12127): Elaborating entity "MIPS64" for the top level hierarchy
+Info (12128): Elaborating entity "IF_Block" for hierarchy "IF_Block:IF_Logic"
+Warning (10240): Verilog HDL Always Construct warning at IF_Block.v(27): inferring latch(es) for variable "r_PC_Counter", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "r_PC_Counter[0]" at IF_Block.v(31)
+Info (10041): Inferred latch for "r_PC_Counter[1]" at IF_Block.v(31)
+Info (12128): Elaborating entity "IF_ID_PIPE" for hierarchy "IF_ID_PIPE:IF_ID_Regs"
+Info (12128): Elaborating entity "ID_Block" for hierarchy "ID_Block:ID_Logic"
+Info (12128): Elaborating entity "registers" for hierarchy "ID_Block:ID_Logic|registers:ID_REGBLK0"
+Info (12128): Elaborating entity "controller" for hierarchy "ID_Block:ID_Logic|controller:ID_CTRL"
+Info (12128): Elaborating entity "ID_IE_PIPE" for hierarchy "ID_IE_PIPE:ID_IE_Regs"
+Info (12128): Elaborating entity "IE_Block" for hierarchy "IE_Block:IE_Logic"
+Warning (10036): Verilog HDL or VHDL warning at IE_Block.v(32): object "w_IE_BranchSel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at IE_Block.v(33): object "w_IE_ReverseB" assigned a value but never read
+Info (12128): Elaborating entity "alu" for hierarchy "IE_Block:IE_Logic|alu:IE_ALU"
+Info (12128): Elaborating entity "addrDyn" for hierarchy "IE_Block:IE_Logic|alu:IE_ALU|addrDyn:IE_Addr0"
+Info (12128): Elaborating entity "IE_MEM_PIPE" for hierarchy "IE_MEM_PIPE:IE_MEM_Regs"
+Info (12128): Elaborating entity "MEM_Block" for hierarchy "MEM_Block:ME_Logic"
+Warning (10036): Verilog HDL or VHDL warning at MEM_Block.v(27): object "w_MEM_BranchSignal" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MEM_Block.v(28): object "w_MEM_BranchCode" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MEM_Block.v(31): object "w_MEM_LoadSign" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MEM_Block.v(32): object "w_MEM_LoadMemOp" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MEM_Block.v(33): object "w_MEM_StoreMemOp" assigned a value but never read
+Warning (10858): Verilog HDL warning at MEM_Block.v(34): object w_MEM_WriteSize used but never assigned
+Warning (10030): Net "w_MEM_WriteSize" at MEM_Block.v(34) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "MEM_WB_PIPE" for hierarchy "MEM_WB_PIPE:MEM_WB_REGS"
+Info (12128): Elaborating entity "WB_Block" for hierarchy "WB_Block:WB_Logic"
+Warning (10036): Verilog HDL or VHDL warning at WB_Block.v(19): object "w_StoreOp" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at WB_Block.v(20): object "w_LoadOp" assigned a value but never read
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "p_INST_MemAddress[0]" is stuck at GND
+    Warning (13410): Pin "p_INST_MemAddress[1]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[5]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[6]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[7]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[8]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[9]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[10]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[11]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[12]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[13]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[14]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[15]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[16]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[17]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[18]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[19]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[20]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[21]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[22]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[23]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[24]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[25]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[26]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[27]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[28]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[29]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[30]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[31]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[32]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[33]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[34]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[35]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[36]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[37]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[38]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[39]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[40]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[41]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[42]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[43]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[44]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[45]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[46]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[47]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[48]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[49]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[50]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[51]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[52]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[53]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[54]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[55]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[56]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[57]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[58]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[59]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[60]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[61]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[62]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemDataOut[63]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemWrite[1]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemWrite[2]" is stuck at GND
+    Warning (13410): Pin "p_DATA_MemWrite[3]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 130 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 57 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[8]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[9]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[10]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[11]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[12]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[13]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[14]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[15]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[16]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[17]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[18]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[19]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[20]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[21]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[22]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[23]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[24]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[25]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[26]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[27]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[28]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[29]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[30]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[31]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[32]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[33]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[34]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[35]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[36]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[37]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[38]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[39]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[40]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[41]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[42]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[43]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[44]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[45]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[46]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[47]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[48]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[49]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[50]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[51]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[52]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[53]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[54]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[55]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[56]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[57]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[58]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[59]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[60]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[61]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[62]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemDataIn[63]"
+    Warning (15610): No output dependent on input pin "p_DATA_MemWait"
+Info (21057): Implemented 4802 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 100 input pins
+    Info (21059): Implemented 198 output pins
+    Info (21061): Implemented 4504 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 136 warnings
+    Info: Peak virtual memory: 608 megabytes
+    Info: Processing ended: Tue Sep 02 12:22:11 2014
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:20
+
+

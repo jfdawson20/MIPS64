@@ -1,0 +1,124 @@
+// Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "07/31/2014 15:26:30"
+                                                                                
+// Verilog Test Bench template for design : registers
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module registers_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg p_clk;
+reg [31:0] p_din;
+reg [4:0] p_readaddr1;
+reg [4:0] p_readaddr2;
+reg p_rst_l;
+reg p_we_l;
+reg [4:0] p_writea	ddr;
+// wires                                               
+wire [31:0]  p_dout1;
+wire [31:0]  p_dout2;
+integer i,j; 
+// assign statements (if any)                          
+registers i1 (
+// port map - connection between master ports and signals/registers   
+	.p_clk(p_clk),
+	.p_din(p_din),
+	.p_dout1(p_dout1),
+	.p_dout2(p_dout2),
+	.p_readaddr1(p_readaddr1),
+	.p_readaddr2(p_readaddr2),
+	.p_rst_l(p_rst_l),
+	.p_we_l(p_we_l),
+	.p_writeaddr(p_writeaddr)
+);
+initial                                                
+begin                                                  
+		p_clk       = 0;
+		p_rst_l     = 0; 
+		p_we_l      = 1;
+		p_din       = 0;
+		p_writeaddr = 0;
+		p_readaddr1     = 0;
+		p_readaddr2     = 0;  
+		#100 
+		p_rst_l = 1; 
+		p_we_l = '0;
+                                     
+$display("Running testbench");                       
+end                                                    
+always                                                 
+              
+begin                                                  
+		#10 p_clk = !p_clk;                       
+		                                                                                                     
+end   		
+
+always begin 
+		#200
+		for (i =0; i<32;i = i + 1)
+		  #20
+		  p_writeaddr = i; 
+		#20
+		
+		p_we_l = '1;
+		//check reads
+		for (i =0; i<32;i = i + 1)
+		  #20
+		  p_readaddr1 = i; 
+		#20
+    $stop;
+end
+
+always begin 
+		#200
+		for (j=0; j<32;j = j + 1)
+		  #20
+		  p_din = j; 
+    #20
+    
+    //check reads
+		for (j=31; j>=0;j = j - 1)
+		  #20
+		  p_readaddr2 = j; 
+    #20
+        
+    $stop;
+end                                                                                                                                                                
+endmodule
+
+/*
+  		#50 
+  		//0x11110000 to addr 3 
+    p_din = 1;
+		p_writeaddr = 1;
+		p_we_l = '0; 
+  		#10
+  		//0x10101010 to addr 
+    p_din = 2;
+ 		p_writeaddr = 2;
+		p_we_l = '0; 
+*/

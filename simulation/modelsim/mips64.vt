@@ -1,0 +1,80 @@
+`timescale 1 ps/ 1 ps
+
+module mips64_tb();
+
+
+
+  /* Wire List */ 
+  reg w_clk; 
+  reg w_rst_l; 
+  wire w_InstReadReq;
+  wire w_InstWriteReq; 
+  wire [63:0] w_InstAddress;
+  wire [63:0] w_InstOutputData;
+  wire w_InstmemWait;
+  
+  wire w_DataReadReq;
+  wire w_DataWriteReq; 
+  wire [63:0] w_DataAddress;
+  wire [63:0] w_DataInputData;
+  wire [63:0] w_DataOutputData;
+  wire w_DatamemWait;
+  
+  wire [3:0] w_DataWriteReq_i;
+  
+  defparam INST_MEM.filePath = "C:/Users/jdawson/Dropbox/FPGA/Processor/scripts/MipsBinaries/addtest.bin";
+  CustMem INST_MEM ( 
+    .p_clk           (w_clk),
+    .p_reset_l       (w_rst_l),
+    .p_readRequest   (w_InstReadReq), 
+    .p_writeRequest  ('0),
+    .p_Address       (w_InstAddress), 
+    .p_OutputData    (w_InstOutputData),
+    .p_MemWait       (w_InstmemWait),  
+    .p_InputData     (64'h0000000000000000)
+  );
+ 
+  defparam DATA_MEM.filePath = "C:/Users/jdawson/Dropbox/FPGA/Processor/scripts/memory/default.mem"; 
+  CustMem DATA_MEM ( 
+    .p_clk           (w_clk),
+    .p_reset_l       (w_rst_l),
+    .p_readRequest   (w_DataReadReq), 
+    .p_writeRequest  (w_DataWriteReq),
+    .p_Address       (w_DataAddress),
+    .p_InputData     (w_DataInputData), 
+    .p_OutputData    (w_DataOutputData),
+    .p_MemWait       (w_DatamemWait)  
+    
+  );
+
+  MIPS64 cpu ( 
+    .p_clk                (w_clk),
+    .p_rst_l              (w_rst_l),
+    .p_INST_MemDataIn     (w_InstOutputData),
+    .p_INST_MemWait       (w_InstmemWait),
+    .p_INST_MemAddress    (w_InstAddress),
+    .p_INST_MemRead       (w_InstReadReq),
+    .p_DATA_MemDataIn     (w_DataOutputData),
+    .p_DATA_MemWait       (w_DatamemWait),
+    .p_DATA_MemDataOut    (w_DataInputData),
+    .p_DATA_MemAddress    (w_DataAddress),
+    .p_DATA_MemRead       (w_DataReadReq),
+    .p_DATA_MemWrite      (w_DataWriteReq_i)
+ 	);
+  
+  assign w_DataWriteReq = w_DataWriteReq_i[0];
+  initial                                                
+  begin                                                  
+      w_clk       = 0;
+      w_rst_l     = 0; 
+                                       
+  $display("Running testbench");                       
+  end     
+                                                  
+  always                                                 
+                
+  begin                                                  
+      #10 w_clk = !w_clk;                       
+                                                                                                           
+  end   		
+endmodule

@@ -1,0 +1,1623 @@
+# Reading C:/altera/14.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do MIPS64_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\14.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\14.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module controller
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(165): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(278): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	controller
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module WB_Block
+# 
+# Top level modules:
+# 	WB_Block
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_WB_PIPE
+# 
+# Top level modules:
+# 	MEM_WB_PIPE
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_Block
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(98): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	MEM_Block
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_ID_PIPE
+# 
+# Top level modules:
+# 	IF_ID_PIPE
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_Block
+# 
+# Top level modules:
+# 	IF_Block
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_MEM_PIPE
+# 
+# Top level modules:
+# 	IE_MEM_PIPE
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_IE_PIPE
+# 
+# Top level modules:
+# 	ID_IE_PIPE
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_Block
+# 
+# Top level modules:
+# 	ID_Block
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(106): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(107): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(111): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(112): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(113): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(114): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(115): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(116): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(117): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(118): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(123): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(124): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(126): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	alu
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module addrDyn
+# 
+# Top level modules:
+# 	addrDyn
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MIPS64
+# 
+# Top level modules:
+# 	MIPS64
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor {C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_Block
+# 
+# Top level modules:
+# 	IE_Block
+# 
+# vlog -sv -work work +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim {C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt}
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# 
+# Top level modules:
+# 	mips64_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  mips64_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mips64_tb 
+# Loading sv_std.std
+# Loading work.mips64_tb
+# ** Error: (vsim-3033) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): Instantiation of 'CustMem' failed. The design unit was not found.
+# 
+#         Region: /mips64_tb
+#         Searched libraries:
+#             C:/altera/14.0/modelsim_ase/altera/verilog/altera
+#             C:/altera/14.0/modelsim_ase/altera/verilog/220model
+#             C:/altera/14.0/modelsim_ase/altera/verilog/sgate
+#             C:/altera/14.0/modelsim_ase/altera/verilog/altera_mf
+#             C:/altera/14.0/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/altera/14.0/modelsim_ase/altera/verilog/cyclonev
+#             C:/altera/14.0/modelsim_ase/altera/verilog/cyclonev_hssi
+#             C:/altera/14.0/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/rtl_work
+#             C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/rtl_work
+#             C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/rtl_work
+# ** Error: (vsim-3033) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): Instantiation of 'CustMem' failed. The design unit was not found.
+# 
+#         Region: /mips64_tb
+#         Searched libraries:
+#             C:/altera/14.0/modelsim_ase/altera/verilog/altera
+#             C:/altera/14.0/modelsim_ase/altera/verilog/220model
+#             C:/altera/14.0/modelsim_ase/altera/verilog/sgate
+#             C:/altera/14.0/modelsim_ase/altera/verilog/altera_mf
+#             C:/altera/14.0/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/altera/14.0/modelsim_ase/altera/verilog/cyclonev
+#             C:/altera/14.0/modelsim_ase/altera/verilog/cyclonev_hssi
+#             C:/altera/14.0/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/rtl_work
+#             C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/rtl_work
+#             C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/rtl_work
+# Loading work.MIPS64
+# Loading work.IF_Block
+# Loading work.IF_ID_PIPE
+# Loading work.ID_Block
+# Loading work.registers
+# Loading work.controller
+# Loading work.ID_IE_PIPE
+# Loading work.IE_Block
+# Loading work.alu
+# Loading work.addrDyn
+# Loading work.IE_MEM_PIPE
+# Loading work.MEM_Block
+# Loading work.MEM_WB_PIPE
+# Loading work.WB_Block
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./MIPS64_run_msim_rtl_verilog.do PAUSED at line 25
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/CustMem.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CustMem
+# 
+# Top level modules:
+# 	CustMem
+resume
+# 
+# add wave *
+# view structure
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: No Design Loaded!
+# Error in macro ./MIPS64_run_msim_rtl_verilog.do line 30
+# No Design Loaded!
+#     while executing
+# "run -all"
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(1): Cannot open `include file "project_defs.vh".
+# -- Compiling module addrDyn
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(5): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(6): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(7): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(13): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(13): near ":": syntax error, unexpected ':'
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(20): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(20): near "]": syntax error, unexpected ']'
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(21): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(24): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(25): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v(26): (vlog-2163) Macro `WIDTH is undefined.
+# 
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(2): Cannot open `include file "project_defs.vh".
+# -- Compiling module alu
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(7): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(8): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(9): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(20): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(21): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(24): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(37): near "begin": syntax error, unexpected begin, expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(50): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(51): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(52): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(53): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(54): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(62): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(78): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(97): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(100): near "begin": syntax error, unexpected begin, expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(101): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(102): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(103): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(106): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(107): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(110): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(111): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(112): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(113): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(114): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(115): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(116): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(117): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(118): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(122): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(123): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(124): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(126): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(2): Cannot open `include file "project_defs.vh".
+# -- Compiling module controller
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(8): (vlog-2163) Macro `IE_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(8): near ":": syntax error, unexpected ':'
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(9): (vlog-2163) Macro `MEM_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(10): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CustMem
+# 
+# Top level modules:
+# 	CustMem
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(1): Cannot open `include file "project_defs.vh".
+# -- Compiling module ID_Block
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(8): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(11): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(12): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(13): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(14): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(15): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(19): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(20): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24): (vlog-2163) Macro `IE_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24): near ":": syntax error, unexpected ':'
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(25): (vlog-2163) Macro `MEM_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(26): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(31): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(32): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(35): (vlog-2163) Macro `WIDTH is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(2): Cannot open `include file "project_defs.vh".
+# -- Compiling module ID_IE_PIPE
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(9): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(10): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(11): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(12): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(13): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(14): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(15): (vlog-2163) Macro `IE_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(16): (vlog-2163) Macro `MEM_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(17): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(20): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(21): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(22): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(23): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(24): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(25): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(26): (vlog-2163) Macro `IE_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(27): (vlog-2163) Macro `MEM_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(28): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(1): Cannot open `include file "project_defs.vh".
+# -- Compiling module IE_Block
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(4): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(5): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(6): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(7): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(8): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(11): (vlog-2163) Macro `IE_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(14): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(16): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(17): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(18): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(21): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(35): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(36): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v(38): (vlog-2163) Macro `WIDTH is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(2): Cannot open `include file "project_defs.vh".
+# -- Compiling module IE_MEM_PIPE
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(9): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(10): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(11): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(12): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(13): (vlog-2163) Macro `MEM_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(14): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(18): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(19): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(20): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(21): (vlog-2163) Macro `MEM_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(22): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v(23): (vlog-2163) Macro `WIDTH is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v(1): Cannot open `include file "project_defs.vh".
+# -- Compiling module IF_Block
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v(8): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v(10): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v(14): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v(15): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v(19): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v(20): (vlog-2163) Macro `WIDTH is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v(2): Cannot open `include file "project_defs.vh".
+# -- Compiling module IF_ID_PIPE
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v(9): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v(10): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v(12): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v(13): (vlog-2163) Macro `WIDTH is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(1): Cannot open `include file "project_defs.vh".
+# -- Compiling module MEM_Block
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(5): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(6): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(7): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(8): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(9): (vlog-2163) Macro `MEM_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(14): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(15): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(16): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(21): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(57): near "begin": syntax error, unexpected begin, expecting IDENTIFIER or TYPE_IDENTIFIER
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(2): Cannot open `include file "project_defs.vh".
+# -- Compiling module MEM_WB_PIPE
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(10): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(11): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(12): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(13): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(16): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(17): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(18): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v(19): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(1): Cannot open `include file "project_defs.vh".
+# -- Compiling module MIPS64
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(10): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(12): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(16): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(18): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(19): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(25): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(26): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(41): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(42): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(56): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(57): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(58): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(66): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(88): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(89): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(90): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(91): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(98): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(101): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(103): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(148): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(149): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(154): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(155): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(197): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(198): (vlog-2163) Macro `WIDTH is undefined.
+# 
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(7): Cannot open `include file "project_defs.vh".
+# -- Compiling module registers
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(13): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(14): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(15): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(16): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(17): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(18): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(22): (vlog-2163) Macro `BLOCKSIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(22): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(22): Multiple packed dimensions are not allowed.
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v(24): near "@": syntax error, unexpected '@', expecting IDENTIFIER or TYPE_IDENTIFIER
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(2): Cannot open `include file "project_defs.vh".
+# -- Compiling module WB_Block
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(5): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(6): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(7): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(8): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(9): (vlog-2163) Macro `WB_CTRL_SIZE is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(11): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(12): (vlog-2163) Macro `ADDR is undefined.
+# 
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(25): (vlog-2163) Macro `WIDTH is undefined.
+# 
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# ** Warning: (vish-7) Failed to open lock file "modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Modified modelsim.ini
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# Error: Acs sdne.
+# l
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# ** Warning: (vish-7) Failed to open lock file "modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# ** Warning: (vish-7) Failed to open lock file "modelsim.ini_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# Modified modelsim.ini
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/project_defs.vh
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/project_defs.vh
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module addrDyn
+# 
+# Top level modules:
+# 	addrDyn
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(106): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(107): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(111): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(112): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(113): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(114): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(115): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(116): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(117): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(118): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(123): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(124): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(126): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	addrDyn
+# 
+# Top level modules:
+# 	alu
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module controller
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(165): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(278): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	controller
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CustMem
+# 
+# Top level modules:
+# 	CustMem
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_Block
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	registers
+# 	controller
+# 
+# Top level modules:
+# 	ID_Block
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_IE_PIPE
+# 
+# Top level modules:
+# 	ID_IE_PIPE
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_Block
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	alu
+# 	addrDyn
+# 
+# Top level modules:
+# 	IE_Block
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_MEM_PIPE
+# 
+# Top level modules:
+# 	IE_MEM_PIPE
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_Block
+# 
+# Top level modules:
+# 	IF_Block
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_ID_PIPE
+# 
+# Top level modules:
+# 	IF_ID_PIPE
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_Block
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(98): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	MEM_Block
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_WB_PIPE
+# 
+# Top level modules:
+# 	MEM_WB_PIPE
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+vlog -reportprogress 30 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module WB_Block
+# 
+# Top level modules:
+# 	WB_Block
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MIPS64
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	IF_Block
+# 	IF_ID_PIPE
+# 	ID_Block
+# 	ID_IE_PIPE
+# 	IE_Block
+# 	IE_MEM_PIPE
+# 	MEM_Block
+# 	MEM_WB_PIPE
+# 	WB_Block
+# 
+# Top level modules:
+# 	MIPS64
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CustMem
+# 
+# Top level modules:
+# 	CustMem
+vlog -reportprogress 300 -work work C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Compiling module CustMem
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	MIPS64
+# 
+# Top level modules:
+# 	mips64_tb
+vsim work.mips64_tb
+# vsim work.mips64_tb 
+# Loading sv_std.std
+# Loading work.mips64_tb
+# Loading work.CustMem
+# Loading work.MIPS64
+# Loading work.IF_Block
+# Loading work.IF_ID_PIPE
+# Loading work.ID_Block
+# Loading work.registers
+# Loading work.controller
+# Loading work.ID_IE_PIPE
+# Loading work.IE_Block
+# Loading work.alu
+# Loading work.addrDyn
+# Loading work.IE_MEM_PIPE
+# Loading work.MEM_Block
+# Loading work.MEM_WB_PIPE
+# Loading work.WB_Block
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(42): Unresolved reference to 'p_Address'.
+# 
+#         Region: /mips64_tb
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(43): Unresolved reference to 'p_InputData'.
+# 
+#         Region: /mips64_tb
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(45): Unresolved reference to 'p_MemWait'.
+# 
+#         Region: /mips64_tb
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(44): Unresolved reference to 'p_OutputData'.
+# 
+#         Region: /mips64_tb
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(38): Unresolved reference to 'p_clk'.
+# 
+#         Region: /mips64_tb
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(40): Unresolved reference to 'p_readRequest'.
+# 
+#         Region: /mips64_tb
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(39): Unresolved reference to 'p_reset_l'.
+# 
+#         Region: /mips64_tb
+# ** Error: (vsim-3043) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(41): Unresolved reference to 'p_writeRequest'.
+# 
+#         Region: /mips64_tb
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_Address'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(7).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_InputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(8).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Error: (vsim-3053) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): Illegal output or inout port connection for "port 'p_OutputData'".
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_OutputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(10).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Error: (vsim-3053) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): Illegal output or inout port connection for "port 'p_MemWait'".
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_Address'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(7).
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_InputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(8).
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Error: (vsim-3053) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): Illegal output or inout port connection for "port 'p_OutputData'".
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_OutputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(10).
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Error: (vsim-3053) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): Illegal output or inout port connection for "port 'p_MemWait'".
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_INST_MemDataIn'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(10).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_INST_MemAddress'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(12).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_DATA_MemDataIn'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(16).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_DATA_MemDataOut'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(18).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_DATA_MemAddress'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(19).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_IE_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_MEM_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(25).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_WB_Ctrl_bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(26).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_ID_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(13).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_IE_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(227): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_WB_PC_4'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(8).
+# 
+#         Region: /mips64_tb/cpu/WB_Logic
+# Error loading design
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Compiling module CustMem
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	MIPS64
+# 
+# Top level modules:
+# 	mips64_tb
+vsim work.mips64_tb
+# vsim work.mips64_tb 
+# Loading sv_std.std
+# Loading work.mips64_tb
+# Loading work.CustMem
+# Loading work.MIPS64
+# Loading work.IF_Block
+# Loading work.IF_ID_PIPE
+# Loading work.ID_Block
+# Loading work.registers
+# Loading work.controller
+# Loading work.ID_IE_PIPE
+# Loading work.IE_Block
+# Loading work.alu
+# Loading work.addrDyn
+# Loading work.IE_MEM_PIPE
+# Loading work.MEM_Block
+# Loading work.MEM_WB_PIPE
+# Loading work.WB_Block
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_Address'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(7).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_InputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(8).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(35): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_OutputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(10).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_Address'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(7).
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_InputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(8).
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(47): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_OutputData'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(10).
+# 
+#         Region: /mips64_tb/DATA_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_INST_MemDataIn'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(10).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_INST_MemAddress'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(12).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_DATA_MemDataIn'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(16).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_DATA_MemDataOut'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(18).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(62): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'p_DATA_MemAddress'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(19).
+# 
+#         Region: /mips64_tb/cpu
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_IE_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_MEM_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(25).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_WB_Ctrl_bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(26).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_ID_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(13).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_IE_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(227): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_WB_PC_4'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(8).
+# 
+#         Region: /mips64_tb/cpu/WB_Logic
+# Error opening C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/[PCDPC] - Port size (64 or 64) does not match connection size 
+# Path name 'C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/[PCDPC] - Port size (64 or 64) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Compiling module CustMem
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	MIPS64
+# 
+# Top level modules:
+# 	mips64_tb
+vsim -novopt work.mips64_tb
+# vsim -novopt work.mips64_tb 
+# Loading sv_std.std
+# Loading work.mips64_tb
+# Loading work.CustMem
+# Loading work.MIPS64
+# Loading work.IF_Block
+# Loading work.IF_ID_PIPE
+# Loading work.ID_Block
+# Loading work.registers
+# Loading work.controller
+# Loading work.ID_IE_PIPE
+# Loading work.IE_Block
+# Loading work.alu
+# Loading work.addrDyn
+# Loading work.IE_MEM_PIPE
+# Loading work.MEM_Block
+# Loading work.MEM_WB_PIPE
+# Loading work.WB_Block
+# ** Warning: (vsim-3017) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [TFMPC] - Too few port connections. Expected 8, found 7.
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_Address'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(7).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3722) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [TFMPC] - Missing connection for port 'p_InputData'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_IE_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_MEM_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(25).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_WB_Ctrl_bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(26).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_ID_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(13).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_IE_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(227): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_WB_PC_4'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(8).
+# 
+#         Region: /mips64_tb/cpu/WB_Logic
+# A time value could not be extracted from the current line
+restart
+# Loading sv_std.std
+# Loading work.mips64_tb
+# Loading work.CustMem
+# Loading work.MIPS64
+# Loading work.IF_Block
+# Loading work.IF_ID_PIPE
+# Loading work.ID_Block
+# Loading work.registers
+# Loading work.controller
+# Loading work.ID_IE_PIPE
+# Loading work.IE_Block
+# Loading work.alu
+# Loading work.addrDyn
+# Loading work.IE_MEM_PIPE
+# Loading work.MEM_Block
+# Loading work.MEM_WB_PIPE
+# Loading work.WB_Block
+# ** Warning: (vsim-3017) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [TFMPC] - Too few port connections. Expected 8, found 7.
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_Address'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(7).
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3722) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [TFMPC] - Missing connection for port 'p_InputData'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_IE_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_MEM_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(25).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_WB_Ctrl_bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(26).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_ID_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(13).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_IE_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(227): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_WB_PC_4'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(8).
+# 
+#         Region: /mips64_tb/cpu/WB_Logic
+# Error opening C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/[PCDPC] - Port size (64 or 64) does not match connection size 
+# Path name 'C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/[PCDPC] - Port size (64 or 64) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Compiling module CustMem
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	MIPS64
+# 
+# Top level modules:
+# 	mips64_tb
+vsim work.mips64_tb
+# vsim work.mips64_tb 
+# Loading sv_std.std
+# Loading work.mips64_tb
+# Loading work.CustMem
+# Loading work.MIPS64
+# Loading work.IF_Block
+# Loading work.IF_ID_PIPE
+# Loading work.ID_Block
+# Loading work.registers
+# Loading work.controller
+# Loading work.ID_IE_PIPE
+# Loading work.IE_Block
+# Loading work.alu
+# Loading work.addrDyn
+# Loading work.IE_MEM_PIPE
+# Loading work.MEM_Block
+# Loading work.MEM_WB_PIPE
+# Loading work.WB_Block
+# ** Warning: (vsim-3017) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [TFMPC] - Too few port connections. Expected 8, found 7.
+# 
+#         Region: /mips64_tb/INST_MEM
+# ** Warning: (vsim-3722) C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(33): [TFMPC] - Missing connection for port 'p_InputData'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_IE_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_MEM_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(25).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_WB_Ctrl_bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(26).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_ID_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(13).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_IE_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(227): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_WB_PC_4'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(8).
+# 
+#         Region: /mips64_tb/cpu/WB_Logic
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(32): near ".": syntax error, unexpected '.', expecting ')'
+# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(32): near ".": syntax error, unexpected '.', expecting ')'
+# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Compiling module CustMem
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	MIPS64
+# 
+# Top level modules:
+# 	mips64_tb
+vsim work.mips64_tb
+# vsim work.mips64_tb 
+# Loading sv_std.std
+# Loading work.mips64_tb
+# Loading work.CustMem
+# Loading work.MIPS64
+# Loading work.IF_Block
+# Loading work.IF_ID_PIPE
+# Loading work.ID_Block
+# Loading work.registers
+# Loading work.controller
+# Loading work.ID_IE_PIPE
+# Loading work.IE_Block
+# Loading work.alu
+# Loading work.addrDyn
+# Loading work.IE_MEM_PIPE
+# Loading work.MEM_Block
+# Loading work.MEM_WB_PIPE
+# Loading work.WB_Block
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_IE_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_MEM_Ctrl_Bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(25).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(85): [PCDPC] - Port size (33 or 33) does not match connection size (32) for port 'p_WB_Ctrl_bus'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v(26).
+# 
+#         Region: /mips64_tb/cpu/ID_Logic
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_ID_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(13).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(128): [PCDPC] - Port size (64 or 64) does not match connection size (5) for port 'p_IE_RegDestRD'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v(24).
+# 
+#         Region: /mips64_tb/cpu/ID_IE_Regs
+# ** Warning: (vsim-3015) C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v(227): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'p_WB_PC_4'. The port definition is at: C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v(8).
+# 
+#         Region: /mips64_tb/cpu/WB_Logic
+# Error opening C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/[PCDPC] - Port size (33 or 33) does not match connection size 
+# Path name 'C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/[PCDPC] - Port size (33 or 33) does not match connection size ' doesn't exist.
+# A time value could not be extracted from the current line
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module addrDyn
+# 
+# Top level modules:
+# 	addrDyn
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(106): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(107): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(111): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(112): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(113): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(114): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(115): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(116): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(117): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(118): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(123): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(124): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(126): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	addrDyn
+# 
+# Top level modules:
+# 	alu
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module controller
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(165): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(278): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	controller
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CustMem
+# ** Fatal: Unexpected signal: 11.
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(36): Verilog Compiler exiting
+# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_Block
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	registers
+# 	controller
+# 
+# Top level modules:
+# 	ID_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_IE_PIPE
+# 
+# Top level modules:
+# 	ID_IE_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_Block
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	alu
+# 	addrDyn
+# 
+# Top level modules:
+# 	IE_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_MEM_PIPE
+# 
+# Top level modules:
+# 	IE_MEM_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_Block
+# 
+# Top level modules:
+# 	IF_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_ID_PIPE
+# 
+# Top level modules:
+# 	IF_ID_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_Block
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(98): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	MEM_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_WB_PIPE
+# 
+# Top level modules:
+# 	MEM_WB_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MIPS64
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	IF_Block
+# 	IF_ID_PIPE
+# 	ID_Block
+# 	ID_IE_PIPE
+# 	IE_Block
+# 	IE_MEM_PIPE
+# 	MEM_Block
+# 	MEM_WB_PIPE
+# 	WB_Block
+# 
+# Top level modules:
+# 	MIPS64
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# ** Fatal: Unexpected signal: 11.
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(77): Verilog Compiler exiting
+# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module WB_Block
+# 
+# Top level modules:
+# 	WB_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/addrDyn.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module addrDyn
+# 
+# Top level modules:
+# 	addrDyn
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(106): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(107): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(110): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(111): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(112): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(113): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(114): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(115): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(116): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(117): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(118): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(123): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(124): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/alu.v(126): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	addrDyn
+# 
+# Top level modules:
+# 	alu
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module controller
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(165): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/controller.v(278): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	controller
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CustMem
+# ** Fatal: Unexpected signal: 11.
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v(36): Verilog Compiler exiting
+# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/ID_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_Block
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	registers
+# 	controller
+# 
+# Top level modules:
+# 	ID_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/ID_IE_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ID_IE_PIPE
+# 
+# Top level modules:
+# 	ID_IE_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IE_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_Block
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	alu
+# 	addrDyn
+# 
+# Top level modules:
+# 	IE_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IE_MEM_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IE_MEM_PIPE
+# 
+# Top level modules:
+# 	IE_MEM_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IF_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_Block
+# 
+# Top level modules:
+# 	IF_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/IF_ID_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module IF_ID_PIPE
+# 
+# Top level modules:
+# 	IF_ID_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_Block
+# ** Warning: C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_Block.v(98): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	MEM_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/MEM_WB_PIPE.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MEM_WB_PIPE
+# 
+# Top level modules:
+# 	MEM_WB_PIPE
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/WB_Block.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module WB_Block
+# 
+# Top level modules:
+# 	WB_Block
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/MIPS64.v
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module MIPS64
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# -- Scanning library directory 'C:/Users/jdawson/Dropbox/FPGA/Processor'
+# -- Scanning library file 'C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v'
+# 
+# Referenced (but uncompiled) modules or primitives:
+# 	IF_Block
+# 	IF_ID_PIPE
+# 	ID_Block
+# 	ID_IE_PIPE
+# 	IE_Block
+# 	IE_MEM_PIPE
+# 	MEM_Block
+# 	MEM_WB_PIPE
+# 	WB_Block
+# 
+# Top level modules:
+# 	MIPS64
+vlog +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v +incdir+C:/Users/jdawson/Dropbox/FPGA/Processor -y C:/Users/jdawson/Dropbox/FPGA/Processor -v C:/Users/jdawson/Dropbox/FPGA/Processor/CustMem.v -work work -O0 C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mips64_tb
+# ** Fatal: Unexpected signal: 11.
+# ** Error: C:/Users/jdawson/Dropbox/FPGA/Processor/simulation/modelsim/mips64.vt(77): Verilog Compiler exiting
+# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.

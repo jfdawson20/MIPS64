@@ -1,0 +1,329 @@
+// Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "08/05/2014 17:08:01"
+                                                                                
+// Verilog Test Bench template for design : alu
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+/* ALU Opcode List 
+  0b0000 : 0x0 : Logic - AND
+  0b0001 : 0x1 : Logic - OR
+  0b0010 : 0x2 : Logic - XOR
+  0b0011 : 0x3 : Logic - NOR
+  0b0100 : 0x4 : Arithmetic - ADD  
+  0b0101 : 0x5 : Arithmetic - ADDU
+  0b0110 : 0x6 : Arithmetic - SUB 
+  0b0111 : 0x7 : Arithmetic - SUBU
+  0b1000 : 0x8 : Comparison -- not defined 
+  0b1001 : 0x9 : Comparison -- not defined 
+  0b1010 : 0xa : Comparison -- Set Less Than 
+  0b1011 : 0xb : Comparison -- Set Less Than Unsigned
+  0b1100 : 0xc : Shift - Left Logical 
+  0b1101 : 0xd : Shift - Left Arithmetic
+  0b1110 : 0xe : Shift - Right Logical
+  0g1111 : 0xf : Shift - Right Arithmetic 
+*/
+`timescale 1 ps/ 1 ps
+
+//`define ARITH
+//`define LOGIC
+`define SHIFT
+`define COMP 
+
+module alu_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [63:0] p_A;
+reg [3:0] p_ALUop;
+reg [63:0] p_B;
+reg [4:0] p_SHAMT;
+// wires                                               
+wire [63:0]  p_R;
+wire p_overflow;
+wire p_zero;
+
+// assign statements (if any)                          
+alu i1 (
+// port map - connection between master ports and signals/registers   
+	.p_A(p_A),
+	.p_ALUop(p_ALUop),
+	.p_B(p_B),
+	.p_R(p_R),
+	.p_SHAMT(p_SHAMT),
+	.p_overflow(p_overflow),
+	.p_zero(p_zero)
+);
+initial                                                
+begin                                                  
+ assign p_A = 0; 
+ assign p_B = 0; 
+ assign p_ALUop = 0; 
+ assign p_SHAMT = 0;
+                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+  #100 
+  `ifdef LOGIC
+  //Logic (AND - true) 
+  assign p_A = 64'hF0F0F0F0F0F0F0F0; 
+  assign p_B = 64'hFFFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0000; 
+  #50 
+  
+  //Logic (AND - false) 
+  assign p_A = 64'h0F0F0F0F0F0F0F0F; 
+  assign p_B = 64'h0000000000000000;  
+  assign p_ALUop = 0'b0000; 
+  
+  #50
+  //Logic (OR - true) 
+  assign p_A = 64'h00FF00FF00FF00FF; 
+  assign p_B = 64'hFFFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0001; 
+  #50 
+  
+  //Logic (OR - false) 
+  assign p_A = 64'h00FF00FF00FF00FF; 
+  assign p_B = 64'h0000000000000000;   
+  assign p_ALUop = 0'b0001;   
+  
+  #50
+  //Logic (XOR - true) 
+  assign p_A = 64'h00FF00FF00FF00FF; 
+  assign p_B = 64'hFFFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0010; 
+  #50 
+  
+  //Logic (XOR - false) 
+  assign p_A = 64'h00FF00FF00FF00FF; 
+  assign p_B = 64'h0000000000000000;   
+  assign p_ALUop = 0'b0010;   
+  
+  #50
+  //Logic (NOR - true) 
+  assign p_A = 64'h00FF00FF00FF00FF; 
+  assign p_B = 64'hFFFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0011; 
+  #50 
+  
+  //Logic (NOR - false) 
+  assign p_A = 64'h00FF00FF00FF00FF; 
+  assign p_B = 64'h0000000000000000;   
+  assign p_ALUop = 0'b0011;   
+  `endif
+  
+  `ifdef ARITH
+//////// arithmetic ///////////////
+  #50
+  //simple ADD (p-p)
+  assign p_A = 64'h0000000000000003; 
+  assign p_B = 64'h0000000000000007;  
+  assign p_ALUop = 0'b0100;
+
+  #50
+  //simple ADD (p-n)
+  assign p_A = 64'h000000000000000A; 
+  assign p_B = 64'hFFFFFFFFFFFFFFF6;  
+  assign p_ALUop = 0'b0100;
+
+  #50
+  //simple ADD (n-p)
+  assign p_A = 64'hFFFFFFFFFFFFFFF6; 
+  assign p_B = 64'h000000000000000F;  
+  assign p_ALUop = 0'b0100;
+
+  #50
+  //simple ADD (n-n)
+  assign p_A = 64'hFFFFFFFFFFFFFFF6; 
+  assign p_B = 64'hFFFFFFFFFFFFFFF6;  
+  assign p_ALUop = 0'b0100;  
+
+  #50
+  //OVL ADD (p-p)
+  assign p_A = 64'h7FFFFFFFFFFFFFFF; 
+  assign p_B = 64'h7FFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0100;
+
+  #50
+  //OVL ADD (n-n)
+  assign p_A = 64'h8000000000000000; 
+  assign p_B = 64'h8000000000000000;  
+  assign p_ALUop = 0'b0100;    
+  
+  #50
+  //simple ADDU 
+  assign p_A = 64'h0000000000000003; 
+  assign p_B = 64'h0000000000000007;  
+  assign p_ALUop = 0'b0101;
+
+  #50
+  //simple ADDU 
+  assign p_A = 64'h000000000000000A; 
+  assign p_B = 64'h800000000000000F;  
+  assign p_ALUop = 0'b0101;
+
+  #50
+  //simple ADDU 
+  assign p_A = 64'h8FFFFFFFFFFFFF6; 
+  assign p_B = 64'h0000000000000FF;  
+  assign p_ALUop = 0'b0101; 
+
+  #50
+  //OVL ADDU 
+  assign p_A = 64'hFFFFFFFFFFFFFFFF; 
+  assign p_B = 64'hFFFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0101;
+
+    #50
+  //simple SUB (p-p) 
+  assign p_A = 64'h0000000000000007; 
+  assign p_B = 64'h0000000000000003;  
+  assign p_ALUop = 0'b0110;
+
+  #50
+  //simple SUB (p-n)
+  assign p_A = 64'h000000000000000A; 
+  assign p_B = 64'hFFFFFFFFFFFFFFF6;  
+  assign p_ALUop = 0'b0110;
+
+  #50
+  //simple SUB (n-P)
+  assign p_A = 64'hfFFFFFFFFFFFFF6; 
+  assign p_B = 64'h00000000000000A;  
+  assign p_ALUop = 0'b0110; 
+
+  #50
+  //OVL SUB 
+  assign p_A = 64'h8000000000000000; 
+  assign p_B = 64'h7FFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0110;
+  
+  #50
+  //simple SUBU 
+  assign p_A = 64'h0000000000000007; 
+  assign p_B = 64'h0000000000000003;  
+  assign p_ALUop = 0'b0111;
+
+  #50
+  //simple SUBU 
+  assign p_A = 64'h000000000000000A; 
+  assign p_B = 64'hFFFFFFFFFFFFFFF6;  
+  assign p_ALUop = 0'b0111;
+
+  #50
+  //simple SUBU 
+  assign p_A = 64'hFFFFFFFFFFFFFF6; 
+  assign p_B = 64'h00000000000000A;  
+  assign p_ALUop = 0'b0111; 
+
+  #50
+  //OVL SUBU 
+  assign p_A = 64'hFFFFFFFFFFFFFFFF; 
+  assign p_B = 64'hFFFFFFFFFFFFFFFF;  
+  assign p_ALUop = 0'b0111;
+
+  
+  `endif 
+  
+  `ifdef COMP
+  /////////////// COMP ///////////////
+  //SLT A is < B 
+  #50
+  assign p_A = 64'h0000000000000101; 
+  assign p_B = 64'h000000000000F000;  
+  assign p_ALUop = 0'b1010;
+  
+  //SLT A is !< B 
+  #50
+  assign p_A = 64'h0000000000000101; 
+  assign p_B = 64'h800000000000F000;  
+  assign p_ALUop = 0'b1010;
+  
+  //SLTU A is < B 
+  #50
+  assign p_A = 64'h0000000000000101; 
+  assign p_B = 64'h000000000000F000;  
+  assign p_ALUop = 0'b1011;
+  
+  //SLTU A is < B 
+  #50
+  assign p_A = 64'h0000000000000101; 
+  assign p_B = 64'h800000000000F000;  
+  assign p_ALUop = 0'b1011;
+  
+  //SLTU A is !< B 
+  #50
+  assign p_A = 64'h8000000000000101; 
+  assign p_B = 64'h600000000000F000;  
+  assign p_ALUop = 0'b1011;
+  
+  `endif
+  
+  `ifdef SHIFT
+  /////////////// shift //////////////
+  //shift A left 5 ( A << 5) logical
+  #50
+  assign p_A = 64'h0000000000000001; 
+  assign p_B = 64'h0000000000000000;  
+  assign p_ALUop = 0'b1100;
+  assign p_SHAMT = 5'b00101; //shift five 
+  
+  //shift A left 5 ( A << 5) arith
+  #50
+  assign p_A = 64'h0000000000000001; 
+  assign p_B = 64'h0000000000000000;  
+  assign p_ALUop = 0'b1101;
+  assign p_SHAMT = 5'b00101; //shift five 
+  
+  //right A right 5 ( A >> 5) logical
+  #50
+  assign p_A = 64'h0000000000000020;  
+  assign p_B = 64'h0000000000000000;  
+  assign p_ALUop = 0'b1110;
+  assign p_SHAMT = 5'b00101; //shift five 
+  
+  //right A right 5 ( A >> 5) arith (positive
+  #50
+  assign p_A = 64'h0000000000000020; 
+  assign p_B = 64'h0000000000000000;  
+  assign p_ALUop = 0'b1111;
+  assign p_SHAMT = 5'b00101; //shift five 
+  
+    //right A right 5 ( A >> 5) arith (positive
+  #50
+  assign p_A = 64'h8000000000000020; 
+  assign p_B = 64'h0000000000000000;  
+  assign p_ALUop = 0'b1111;
+  assign p_SHAMT = 5'b00101; //shift five 
+  
+  `endif
+  
+                                           
+// --> end                                             
+end                                                    
+endmodule
+
