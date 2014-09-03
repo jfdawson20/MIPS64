@@ -4,7 +4,7 @@ module addrDyn(
   input  wire              p_CI,
   input  wire [`WIDTH-1:0] p_A,
   input  wire [`WIDTH-1:0] p_B,
-  output reg [`WIDTH-1:0] p_R,
+  output reg  [`WIDTH-1:0] p_R,
   output reg              p_CO,
   output reg              p_OVL
   ); 
