@@ -31,7 +31,7 @@ module registers (
 		end
 	end
 	
-	assign p_dout1 = r_regBlock[p_readaddr1];
-	assign p_dout2 = r_regBlock[p_readaddr2];	
+	assign p_dout1 = (p_readaddr1 == 64'h0000000000000000) ? 64h'0000000000000000 : r_regBlock[p_readaddr1];
+	assign p_dout2 = (p_readaddr2 == 64'h0000000000000000) ? 64h'0000000000000000 : r_regBlock[p_readaddr2];
 endmodule 
 

@@ -47,7 +47,7 @@ module IE_Block (
     assign w_IE_ReverseB         = p_IE_Ctrl_Bus[9];
 
     /* Input A Mux */
-	  assign w_IE_ALUInputA = (w_IE_ShiftInputSwitch) ? p_IE_DataB : p_IE_DataA;
+	assign w_IE_ALUInputA = (w_IE_ShiftInputSwitch) ? p_IE_DataB : p_IE_DataA;
     
     /* Input B Mux : B or Immediate */
     assign w_IE_ALUInputB = (w_IE_ALUSRC) ? p_IE_SignExtended : p_IE_DataB;

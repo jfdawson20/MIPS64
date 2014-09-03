@@ -5,7 +5,7 @@ module ID_Block (
   input wire p_reset_l,  
   
   /* IF Signals */ 
-  input wire [`WIDTH-1:0] p_ID_IN_Instruction, 
+  input wire [31:0] p_ID_IN_Instruction, 
   
   /* ID_EX Signals */
   output reg [`WIDTH-1:0] p_DataA,
@@ -36,7 +36,7 @@ module ID_Block (
   
   /* Instruction Field Decode */ 
   assign w_OpCode     = p_ID_IN_Instruction[31:26];
-  assign w_AddrA     = p_ID_IN_Instruction[25:21];
+  assign w_AddrA      = p_ID_IN_Instruction[25:21];
   assign w_AddrB      = p_ID_IN_Instruction[20:16];
   assign w_immediate  = p_ID_IN_Instruction[15:0];
   assign w_funct      = p_ID_IN_Instruction[4:0];

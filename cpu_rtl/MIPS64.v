@@ -7,18 +7,18 @@ module MIPS64(
 	input wire p_rst_l,
 	
 	/* Instruction memory interface */
-	input  wire [31:0] p_INST_MemDataIn,
-	input  wire p_INST_MemWait,
-	output reg [`WIDTH-1:0] p_INST_MemAddress,
-	output reg p_INST_MemRead,
+	input  wire [31:0]        p_INST_MemDataIn,
+	input  wire               p_INST_MemWait,
+	output reg [`WIDTH-1:0]   p_INST_MemAddress,
+	output reg                p_INST_MemRead,
 	
 	/* Data Memory Interface */
-	input  wire [`WIDTH-1:0] p_DATA_MemDataIn,
-	input  wire p_DATA_MemWait,
-	output reg [`WIDTH-1:0] p_DATA_MemDataOut,
-   output reg [`WIDTH-1:0] p_DATA_MemAddress,
-	output reg p_DATA_MemRead,
-   output reg [3:0] p_DATA_MemWrite
+	input  wire [`WIDTH-1:0]  p_DATA_MemDataIn,
+	input  wire               p_DATA_MemWait,
+	output reg [`WIDTH-1:0]   p_DATA_MemDataOut,
+  output reg [`WIDTH-1:0]   p_DATA_MemAddress,
+	output reg                p_DATA_MemRead,
+  output reg [3:0]          p_DATA_MemWrite
  	);
 	
     /* IF */
@@ -26,15 +26,19 @@ module MIPS64(
     wire [`WIDTH-1:0] w_IF_PC_Counter;
    
     IF_Block IF_Logic (
-      .p_clk                (p_clk), 
-      .p_reset_l            (p_rst_l),
-      .p_INST_MemDataIn     (p_INST_MemDataIn),
-      .p_INST_MemWait       (p_INST_MemWait), 
-      .p_IF_INST_MemAddress (p_INST_MemAddress),
-      .p_IF_INST_MemRead    (p_INST_MemRead),
-      .p_IF_Instruction     (w_IF_Instruction),
-      .p_PC_Counter         (w_IF_PC_Counter)
-    
+      .p_clk                  (p_clk), 
+      .p_reset_l              (p_rst_l),
+      .p_IF_ExceptionAddress  (64'h0000000000000000),
+      .p_IF_ExceptionSRC      ('0),
+      .p_IF_BranchAddress     (64'h0000000000000000),
+      .p_IF_PCSrc             ('0),
+      .p_INST_MemDataIn       (p_INST_MemDataIn),
+      .p_INST_MemWait         (p_INST_MemWait), 
+      .p_IF_INST_MemAddress   (p_INST_MemAddress),
+      .p_IF_INST_MemRead      (p_INST_MemRead),
+      .p_IF_Instruction       (w_IF_Instruction),
+      .p_PC_Counter           (w_IF_PC_Counter),
+      .p_IF_Stall             ()
     );
 
     /* IF_ID Pipeline Register Block */
