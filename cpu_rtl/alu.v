@@ -2,8 +2,10 @@
 `include "project_defs.vh"
 
 module alu (
-  input  wire [3:0] p_ALUop,
-  input  wire [4:0] p_SHAMT,
+  input  wire [3:0]        p_ALUop,
+  input  wire [4:0]        p_SHAMT,
+  input  wire              p_DoubleOp,
+  input  wire              p_Shift32,
   input  wire [`WIDTH-1:0] p_A, 
   input  wire [`WIDTH-1:0] p_B,
   output reg  [`WIDTH-1:0] p_R,
@@ -25,17 +27,19 @@ module alu (
 
   //module instantiation
   addrDyn IE_Addr0 (
-    .p_CI   (p_ALUop[1]),
-    .p_A    (p_A),
-    .p_B    (w_ToBorNot),
-    .p_R    (w_addrR),
-    .p_CO   (w_carryout),
-    .p_OVL  (w_addrOVL)
+    .p_CI       (p_ALUop[1]),
+    .p_A        (p_A),
+    .p_B        (w_ToBorNot),
+    .p_R        (w_addrR),
+    .p_DoubleOp (p_DoubleOp),
+    .p_CO       (w_carryout),
+    .p_OVL      (w_addrOVL)
   );
   
-  //Main Logic Block 
+  /* Main Logic Block */ 
   always_comb begin 
-    //check and invert be given ALUopt[1] (used for subtraction) 
+
+    /* check and invert be given ALUopt[1] (used for subtraction) */    
     case(p_ALUop[1])
       1'b0    : w_ToBorNot = p_B;
       1'b1    : w_ToBorNot = ~p_B;
@@ -45,7 +49,7 @@ module alu (
     w_arithR = w_addrR;
     p_zero   = (w_arithR == 0) ? '1 : '0; 
     
-    //overflow logic 
+    /* overflow logic */ 
     case(p_ALUop[1:0])
       2'b00   : p_overflow = w_addrOVL;
       2'b01   : p_overflow = w_carryout;
@@ -76,17 +80,24 @@ module alu (
   /*                  Shift Block                           */
   /*--------------------------------------------------------*/
   reg [`WIDTH-1:0] w_shiftR;
+  wire w_ShiftAmount; 
   
+  /* added support for + 32 sign extension */
   always_comb begin
+    case(p_Shift32) 
+      1'b0    : w_ShiftAmount = (p_SHAMT);     
+      1'b1    : w_ShiftAmount = (p_SHAMT + 32);
+      default : w_ShiftAmount = (p_SHAMT); 
+      
     case(p_ALUop[1:0])
       //left logical 
-      2'b00   : w_shiftR = p_A << p_SHAMT;  
+      2'b00   : w_shiftR = p_A <<  w_ShiftAmount;  
       //left arithmetic 
-      2'b01   : w_shiftR = p_A <<< p_SHAMT; 
+      2'b01   : w_shiftR = p_A <<< w_ShiftAmount; 
       //right logical 
-      2'b10   : w_shiftR = p_A >> p_SHAMT; 
+      2'b10   : w_shiftR = p_A >>  w_ShiftAmount; 
       //right arithmetic
-      2'b11   : w_shiftR = $signed(p_A) >>> p_SHAMT; 
+      2'b11   : w_shiftR = $signed(p_A) >>> w_ShiftAmount; 
       default : w_shiftR = p_A;
     endcase
   end 

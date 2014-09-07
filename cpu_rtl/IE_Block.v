@@ -31,6 +31,8 @@ module IE_Block (
     wire w_IE_SHAMTSel;
     wire w_IE_BranchSel;
     wire w_IE_ReverseB;
+    wire w_IE_DoubleOp; 
+    wire w_IE_32OffsetShift;
 
     wire [`WIDTH-1:0] w_IE_ALUInputA;
     wire [`WIDTH-1:0] w_IE_ALUInputB;
@@ -45,9 +47,11 @@ module IE_Block (
     assign w_IE_SHAMTSel         = p_IE_Ctrl_Bus[7];
     assign w_IE_BranchSel        = p_IE_Ctrl_Bus[8];
     assign w_IE_ReverseB         = p_IE_Ctrl_Bus[9];
+    assign w_IE_DoubleOp         = p_IE_Ctrl_Bus[10];
+    assign w_IE_32OffsetShift    = p_IE_Ctrl_Bus[11];
 
     /* Input A Mux */
-	assign w_IE_ALUInputA = (w_IE_ShiftInputSwitch) ? p_IE_DataB : p_IE_DataA;
+	  assign w_IE_ALUInputA = (w_IE_ShiftInputSwitch) ? p_IE_DataB : p_IE_DataA;
     
     /* Input B Mux : B or Immediate */
     assign w_IE_ALUInputB = (w_IE_ALUSRC) ? p_IE_SignExtended : p_IE_DataB;
@@ -65,6 +69,8 @@ module IE_Block (
       .p_SHAMT      (w_SHAMT_IN),
       .p_A          (w_IE_ALUInputA), 
       .p_B          (w_IE_ALUInputB),
+      .p_DoubleOp   (w_IE_DoubleOp),
+      .p_Shift32    (w_IE_32OffsetShift),
       .p_R          (p_IE_ALUResult),
       .p_zero       (p_IE_ALUZero), 
       .p_overflow   (p_IE_Overflow)
